@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Legacy - Página Inicial</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Sedan:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/gif" href="imagens/icon.gif">
+    </style>
+    <link rel="stylesheet" href="style.css" />
+    
+</head>
+
+<body>
+    <header>
+        <nav id="nav-menu">
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="menu">
+            <a href="index.html">Home</a>
+            <a href="#screenshots">Screenshots</a>
+            <a href="#features">Features</a>
+            <a href="index2.html">Sobre mim</a>
+            <a href="index3.html">Jogue agora</a>
+            </ul>
+        <nav>
+            
+            
+        </nav>
+    </header>
+
+    <main>
+        <section id="titulo">
+            <h1>Dark Legacy</h1>
+        
+        </section>
+        
+        <section class="historia">
+            <p> Há séculos, um poderoso necromante, conhecido como a Lord Mhaldazzar, governava a região de Valáquia com punho de ferro. No entanto, um grupo de caçadores destemidos liderados pelo lendário Richard Valencourt, conseguiram derrotá-lo e selá-lo em um sono eterno. Por décadas, a região viveu em paz, mas recentemente, rumores de que o selo que mantinha o necromante adormecido estava enfraquecendo e começou a se romper.
+                Em meio ao caos, criaturas das trevas emergiram dos locais mais sombrios da terra, ameaçando mergulhar o mundo na escuridão novamente.</p>
+                
+            <p> O jogador assume o papel de Wuthir Valencourt, um descendente distante de Richard, que herdou a habilidade e a coragem de seus antepassados. Conforme as trevas se espalham pela Valáquia, Wuthir é convocado para enfrentar o mal que se ergue mais uma vez.
+                A jogabilidade mistura elementos de aventura, plataformas e hack and slash, enquanto Wuthir viaja por vastos castelos góticos, florestas sombrias e cidades abandonadas, enfrentando hordas de criaturas demoníacas. Colete relíquias para ajudá-lo em sua jornada e desafie o Necromante. </p>
+        
+        
+                <br><br><br><br><br>
+            </section>
+
+
+            <section>
+                <h2>Personagem e Inimigos</h2>
+                <div class="feature">
+                    <img src="imagens/wuthir.png" alt="Wuthir" title="Wuthir">
+                    <div>
+                        <h3>Wuthir Valencourt</h3>  
+                        <p>Wuthir Valencourt protagonista de Dark Legacy, descendente da família de Caçadores de Vampiros Valencourt.</p>
+                    </div>
+                </div>
+            
+                <div class="feature">
+                    <img src="imagens/mhaldazzar.png" alt="Mhaldazzar" title="Mhaldazzar">
+                    <div>
+                        <h3>Lord Mhaldazzar</h3>  
+                        <p>Lord Mhaldazzar poderoso necromante e antagonista que estava aprisionado num selo mágico pelos antepassados de Wuthir.</p>
+                    </div>
+                </div>
+            
+                <div class="feature">
+                    <img src="imagens/goblin.png" alt="Goblin" title="Goblin">
+                    <div>
+                        <h3>Goblin</h3>  
+                        <p>Criaturas verdes que adoram qualquer coisa feita de ouro, não ligados diretamente a Mhaldazzar porém costumam ser agressivos.</p>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <img src="imagens/thing-preview.gif" alt="Thing" title="Thing">
+                    <div>
+                        <h3>Coisa</h3>  
+                        <p>Inimigo não identificado encontrado no pântano.</p>
+                    </div>
+                </div>
+            
+                <div class="feature">
+                    <img src="imagens/ghost.gif" alt="Ghost" title="Ghost">
+                    <div>
+                        <h3>Fantasma</h3>  
+                        <p>Fantasmas de aventureiros mortos escravizados por Mhaldazzar.</p>
+                    </div>
+                </div>
+            
+                <div class="feature">
+                    <img src="imagens/wraith.gif" alt="wraith" title="wraith">
+                    <div>
+                        <h3>Espectro</h3>  
+                        <p>Lacaio espectral de Mhaldazzar, costuma caçar aventureiros no pântano.</p>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <img src="imagens/skeleton.gif" alt="Skeleton" title="Skeleton">
+                    <div>
+                        <h3>Esqueleto</h3>  
+                        <p>Os restos mortais de aventureiros de séculos passados, agora reanimados e servem a Mhaldazzar.</p>
+                    </div>
+                </div>
+
+            </section>
+
+    <!-- Features -->
+
+        <section id="screenshots">
+            <h2>Screenshots</h2>
+            <div class="gallery">
+                <img src="imagens/swamp.png" title="Swamp" alt="Swamp"> 
+                <img src="imagens/town.png" title="Town" alt="Town">   
+                <img src="imagens/castle.png" title="Castle" alt="Castle">           
+                <!-- Screenshots -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <a href="https://www.construct.net/en" target="_blank">
+            <img src="imagens/iconconstruct3.png" width="40" height="auto" alt="iconconstruct3">
+        </a>
+    <p> Projeto desenvolvido por Lieslei Adriano Navarro | Engine: Construct 3</p>
+    <p>© Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+        function mostrarMenu() {
+            var menu = document.querySelector(".header-nav");
+            menu.classList.toggle("show");
+        }
+    </script>
+  
+        
+    </div>
+</body> 
+
+</html>

@@ -1,0 +1,41 @@
+$primary: #0C041E;
+$font: "Inter Tight", sans-serif;
+$color: #FFFFFF;
+
+body {
+    font-family: $font;
+    color: $color;
+    background-color: #0C041E;
+}
+
+.header_text {
+    font-family: $font;
+    font-weight: 600;
+}
+
+.swiper-button-next:after {
+    color: $color;
+}
+
+.swiper-button-prev:after {
+    color: $color;
+}
+
+.swiper-scrollbar-drag {
+    background: $color;
+}
+
+.size_img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+@media (min-width: 994px){
+    .size_img {
+        width: 35%;
+    }
+}
+
+// .primary {
+//     background-color: #0C041E;
+// }
