@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -13,11 +13,22 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
+    <link rel="stylesheet" href="js/glide/node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="js/glide/node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
+
     <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
+    <?php
+    $url = "http://localhost/gamesheet/api/games.php";
+
+    $dadosAPI = file_get_contents($url);
+
+    $dadosJogos = json_decode($dadosAPI)
+    ?>
+
     <header>
         <nav class="navbar navbar-expand-lg header_back" data-bs-theme="dark">
             <div class="container-fluid">
@@ -81,12 +92,17 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/glide/node_modules/@glidejs/glide/dist/glide.min.js"></script>
 
     <script>
         const swiper = new Swiper('.swiper', {
             // Optional parameters
             direction: 'horizontal',
             loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
 
             // If we need pagination
             pagination: {
@@ -104,8 +120,13 @@
                 el: '.swiper-scrollbar',
             },
         });
-    </script>
 
+        const config = {
+            type: 'carousel',
+            perView: 5
+        }
+        new Glide('.glide', config).mount()
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

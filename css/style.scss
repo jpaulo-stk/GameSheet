@@ -30,7 +30,23 @@ body {
     border-radius: 6px;
 }
 
-@media (min-width: 994px){
+.size_img2 {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.backtext {
+    background: linear-gradient(180deg, rgba(62, 0, 125, 1) 0%, rgba(13, 0, 31, 1) 100%);
+    -webkit-box-shadow: 0px 0px 10px -3px rgba(60, 0, 92, 1);
+    -moz-box-shadow: 0px 0px 10px -3px rgba(60, 0, 92, 1);
+    box-shadow: 0px 0px 10px -3px rgba(60, 0, 92, 1);
+}
+
+.text_azul {
+    text-decoration: none;
+}
+
+@media (min-width: 994px) {
     .size_img {
         width: 35%;
     }
