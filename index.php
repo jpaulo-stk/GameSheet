@@ -42,17 +42,17 @@
                             <a class="nav-link text-white header_text" aria-current="page" href="index.php?pages=home">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white header_text" href="index.php?pages=equipe">Equipe</a>
+                            <a class="nav-link text-white header_text" href="equipe">Equipe</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-white header_text" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Games
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item header_text" href="index.php?pages=gamesFree">Jogos Gratuitos</a></li>
-                                <li><a class="dropdown-item header_text" href="#">Destaques</a></li>
-                                <li><a class="dropdown-item header_text" href="#">Promoções</a></li>
-                                <li><a class="dropdown-item header_text" href="#">Lançamentos</a></li>
+                                <li><a class="dropdown-item header_text" href="jogosPage">Jogos Gratuitos</a></li>
+                                <li><a class="dropdown-item header_text" href="#1">Destaques</a></li>
+                                <li><a class="dropdown-item header_text" href="#2">Promoções</a></li>
+                                <li><a class="dropdown-item header_text" href="#3">Lançamentos</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -69,30 +69,50 @@
         <?php
         //imprimir o conteudo do array do GET
         //print_r($_GET);
-
-        //recuperar variavel pagina
-        $pages = $_GET["pages"] ?? "home";
-
-        //paginas home php
-        $paginas = "pages/{$pages}.php";
-
-
-        //verificar se o arquivo exite
-        if (file_exists($paginas)) {
-            include $paginas;
+        if (isset($_GET["param"])) {
+            $param = $_GET["param"];
+    
+            $p = explode("/", $param);
+        }
+    
+        $page = $p[0] ?? "home";
+        $jogo = $p[1] ?? null;
+    
+        if ($page == "jogos") {
+            $pagina = "jogos/{$jogo}.php";
+        } else {
+            $pagina = "pages/{$page}.php";
+        }
+    
+        if (file_exists($pagina)) {
+            include $pagina;
         } else {
             include "pages/erro.php";
         }
         ?>
-
     </main>
 
     <footer>
+        <section class="infos">
+            <div>
+                <h3>Redes Sociais</h3>
+                <a href="mailto:joaopaulo_bazan@hotmail.com?subject=Duvidas"><i class="fa-solid fa-envelope"></i></a>
 
+                <a href="https://wa.me/5544998030402"><i class="fa-solid fa-phone"></i></a>
+
+                <a href="https://www.instagram.com/joaopaulo_bf_/"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </section>
+
+        <div class="creditos">
+            <P>Desenvolvido por <br> João Paulo &copy;</P>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/glide/node_modules/@glidejs/glide/dist/glide.min.js"></script>
+    <script src="js/fslightbox/node_modules/fslightbox/index.js"></script>
+
 
     <script>
         const swiper = new Swiper('.swiper', {
@@ -123,11 +143,21 @@
 
         const config = {
             type: 'carousel',
-            perView: 5
-        }
+            perView: 5,
+            breakpoints: {
+                992: {
+                    perView: 4
+                }
+            }
+        };
+
         new Glide('.glide', config).mount()
+
+        
     </script>
 
+
+    <script src="https://kit.fontawesome.com/181ad36814.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 

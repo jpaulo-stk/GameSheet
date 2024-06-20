@@ -8,6 +8,4 @@
     $banners[4] = array("nome" => "Galactic Attack", "imagem" => "images/galaxyAttack/logo.png", "id_game" =>3);
     $banners[5] = array("nome" => "The Last Word", "imagem" => "images/TLW/logoTLW.png", "id_game" =>3);
 
-
-
     echo json_encode($banners);

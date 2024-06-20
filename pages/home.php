@@ -31,10 +31,10 @@ $dadosBanner2 = json_decode($dadosAPI2);
     <div class="swiper-pagination"></div>
 </div>
 
-<h1 class="h4 text-center m-3">Jogos Gratuitos</h1>
+<h1 class="h3 fw-bold text-center m-4">Jogos Gratuitos</h1>
 
-<div class="d-flex justify-content-center">
-    <div id="carouselExampleAutoplaying" class="carousel slide d-flex w-75" data-bs-ride="carousel">
+<div class="d-lg-none d-xl-none d-md-none d-flex justify-content-center">
+    <div id="carouselExampleAutoplaying" class="carousel slide d-flex w-50" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="images/snake/Snake_Hungry_logo.png" class="d-block w-100" alt="Snake_Hungry">
@@ -43,7 +43,7 @@ $dadosBanner2 = json_decode($dadosAPI2);
                 <img src="images/darkLegacy/DarkLegacyLogo.png" class="d-block w-100" alt="Dark_Legacy">
             </div>
             <div class="carousel-item">
-                <img src="images/labFy/LabFyGize_logo.png" class="d-block w-100" alt="LabFy_Gize">
+
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -57,18 +57,18 @@ $dadosBanner2 = json_decode($dadosAPI2);
     </div>
 </div>
 
-<section class="container d-lg-block">
-    <div class="glide ">
+<section class="container d-none d-sm-none d-md-block">
+    <div class="glide">
         <div class="glide__track" data-glide-el="track">
             <ul class="glide__slides">
                 <?php
                 foreach ($dadosBanner2 as $dados2) {
                 ?>
-                    <li class="glide__slide card backtext"><a href="<?= $dados2->id_game ?>" class="text_azul"><img src="<?= $dados2->imagem ?>" class="card-img-top img_size2" alt="<?= $dados2->nome ?>">
-                        <div class="card-body">
-                            <p class="card-text fw-bold text-white m-0"><?= $dados2->nome ?></p>
-                            <p class="text-white m-0">Gratuito para jogar</p>
-                        </div>
+                    <li class="glide__slide card border-0"><a href="<?= $dados2->id_game ?>" class="text_azul"><img src="<?= $dados2->imagem ?>" class="card-img-top size_img2" alt="<?= $dados2->nome ?>">
+                            <div class="card-body backtext p-2">
+                                <p class="card-text fw-bold text-white m-0 size_p"><?= $dados2->nome ?></p>
+                                <p class="text-white m-0 size_p2">Gratuito para jogar</p>
+                            </div>
                         </a>
                     </li>
                 <?php
@@ -76,10 +76,433 @@ $dadosBanner2 = json_decode($dadosAPI2);
                 ?>
             </ul>
         </div>
-        <div class="glide">
-            <div class="glide__track" data-glide-el="track"></div>
+    </div>
+</section>
+
+<!-- bagunca -->
+<section>
+    <h1 class="h3 fw-bold text-center m-4 mt-5" id="1">Recomendados e em destaque</h1>
+
+    <section class="container text-center d-sm-block d-md-none d-lg-none d-xl-none">
+        <div class="row row-cols-2 justify-content-center">
+                <div class="col mb-3" style="width: 18rem;">
+                    <div class="card border-0">
+                        <img src="images/outros_jogos/dbd.png" class="card-img-top" alt="">
+                        <div class="card-body backtext p-2">
+                            <div>
+                                <p class="card-text fw-bold text-white m-0 size_p">Dead by Daylight</p>
+                                <p class="text-white m-0 size_p2">R$ 199,90</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-3" style="width: 18rem;">
+                    <div class="card border-0">
+                        <img src="images/outros_jogos/eldenring.png" class="card-img-top" alt="">
+                        <div class="card-body backtext p-2">
+                            <div>
+                                <p class="card-text fw-bold text-white m-0 size_p">Dead by Daylight</p>
+                                <p class="text-white m-0 size_p2">R$ 199,90</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" style="width: 18rem;">
+                    <div class="card border-0">
+                        <img src="images/outros_jogos/csgo.png" class="card-img-top" alt="">
+                        <div class="card-body backtext p-2">
+                            <p class="card-text fw-bold text-white m-0 size_p">Counter Strike 2</p>
+                            <p class="text-white m-0 size_p2">R$ 199,90</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <a href="" class="text_azul">
+                <p class="row p-2 fw-bold text-white">mostrar mais...</p>
+            </a>
+        </div>
+    </section>
+
+    <div class="d-xl-none d-sm-none d-none d-md-block">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col" style="width: 18rem;">
+                    <div class="card border-0">
+                        <img src="images/outros_jogos/dbd.png" class="card-img-top" alt="">
+                        <div class="card-body backtext p-2">
+                            <div>
+                                <p class="card-text fw-bold text-white m-0 size_p">Dead by Daylight</p>
+                                <p class="text-white m-0 size_p2">R$ 199,90</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" style="width: 18rem;">
+                    <div class="card border-0">
+                        <img src="images/outros_jogos/eldenring.png" class="card-img-top" alt="">
+                        <div class="card-body backtext p-2">
+                            <p class="card-text fw-bold text-white m-0 size_p">Elden Ring</p>
+                            <p class="text-white m-0 size_p2">R$ 199,90</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" style="width: 18rem;">
+                    <div class="card border-0">
+                        <img src="images/outros_jogos/csgo.png" class="card-img-top" alt="">
+                        <div class="card-body backtext p-2">
+                            <p class="card-text fw-bold text-white m-0 size_p">Counter Strike 2</p>
+                            <p class="text-white m-0 size_p2">R$ 199,90</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <a href="" class="text_azul">
+                <p class="row p-2 fw-bold text-white">mostrar mais...</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="d-none d-md-none d-lg-none d-xl-block">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col" style="width: 18rem;">
+                    <div class="card border-0">
+                        <img src="images/outros_jogos/dbd.png" class="card-img-top" alt="">
+                        <div class="card-body backtext p-2">
+                            <div>
+                                <p class="card-text fw-bold text-white m-0 size_p">Dead by Daylight</p>
+                                <p class="text-white m-0 size_p2">R$ 199,90</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" style="width: 18rem;">
+                    <div class="card border-0">
+                        <img src="images/outros_jogos/eldenring.png" class="card-img-top" alt="">
+                        <div class="card-body backtext p-2">
+                            <p class="card-text fw-bold text-white m-0 size_p">Elden Ring</p>
+                            <p class="text-white m-0 size_p2">R$ 199,90</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" style="width: 18rem;">
+                    <div class="card border-0">
+                        <img src="images/outros_jogos/csgo.png" class="card-img-top" alt="">
+                        <div class="card-body backtext p-2">
+                            <p class="card-text fw-bold text-white m-0 size_p">Counter Strike 2</p>
+                            <p class="text-white m-0 size_p2">R$ 199,90</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" style="width: 18rem;">
+                    <div class="card border-0">
+                        <img src="images/outros_jogos/gta.png" class="card-img-top" alt="">
+                        <div class="card-body backtext p-2">
+                            <p class="card-text fw-bold text-white m-0 size_p">Grand Theft Auto V</p>
+                            <p class="text-white m-0 size_p2">R$ 199,90</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" style="width: 18rem;">
+                    <div class="card border-0">
+                        <img src="images/outros_jogos/forza.png" class="card-img-top" alt="">
+                        <div class="card-body backtext p-2">
+                            <p class="card-text fw-bold text-white m-0 size_p">Forza Horizon 5</p>
+                            <p class="text-white m-0 size_p2">R$ 199,90</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <a href="" class="text_azul">
+                <p class="row p-2 fw-bold text-white">mostrar mais...</p>
+            </a>
+        </div>
+    </div>
+</section>
+                
+<section>
+    <h1 class="h3 fw-bold text-center m-4" id="2">Jogos em Promoção</h1>
+
+    <section class="container text-center d-sm-block d-md-none d-lg-none d-xl-none">
+        <div class="row row-cols-2 justify-content-center">
+                <div class="col mb-3" style="width: 18rem;">
+                    <div class="card border-0">
+                        <img src="images/outros_jogos/dbd.png" class="card-img-top" alt="">
+                        <div class="card-body backtext p-2">
+                            <div>
+                                <p class="card-text fw-bold text-white m-0 size_p">Dead by Daylight</p>
+                                <p class="text-white m-0 size_p2">R$ 199,90</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-3" style="width: 18rem;">
+                    <div class="card border-0">
+                        <img src="images/outros_jogos/eldenring.png" class="card-img-top" alt="">
+                        <div class="card-body backtext p-2">
+                            <div>
+                                <p class="card-text fw-bold text-white m-0 size_p">Dead by Daylight</p>
+                                <p class="text-white m-0 size_p2">R$ 199,90</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" style="width: 18rem;">
+                    <div class="card border-0">
+                        <img src="images/outros_jogos/csgo.png" class="card-img-top" alt="">
+                        <div class="card-body backtext p-2">
+                            <p class="card-text fw-bold text-white m-0 size_p">Counter Strike 2</p>
+                            <p class="text-white m-0 size_p2">R$ 199,90</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <a href="" class="text_azul">
+                <p class="row p-2 fw-bold text-white">mostrar mais...</p>
+            </a>
+        </div>
+    </section>
+
+    <div class="d-xl-none d-sm-none d-none d-md-block">
+        <div class="container d-flex justify-content-center">
+            <div class="row">
+                <div class="col" style="width: 18rem;">
+                    <div class="card border-0">
+                        <img src="images/outros_jogos/b4b.png" class="card-img-top" alt="">
+                        <div class="card-body backtext p-2">
+                            <p class="card-text fw-bold text-white m-0 size_p">Back 4 Blood</p>
+                            <p class="text-white m-0 size_p2">R$ 199,90</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" style="width: 18rem;">
+                    <div class="card border-0">
+                        <img src="images/outros_jogos/avatar.png" class="card-img-top" alt="">
+                        <div class="card-body backtext p-2">
+                            <p class="card-text fw-bold text-white m-0 size_p">Avatar Frontiers of...</p>
+                            <p class="text-white m-0 size_p2">R$ 199,90</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" style="width: 18rem;">
+                    <div class="card border-0">
+                        <img src="images/outros_jogos/asseto.png" class="card-img-top" alt="">
+                        <div class="card-body backtext p-2">
+                            <p class="card-text fw-bold text-white m-0 size_p">Assetto Corsa</p>
+                            <p class="text-white m-0 size_p2">R$ 199,90</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <a href="" class="text_azul">
+                <p class="row p-2 fw-bold text-white">mostrar mais...</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="d-none d-md-none d-lg-none d-xl-block">
+        <div class="container d-flex justify-content-center">
+            <div class="row">
+                <div class="col" style="width: 18rem;">
+                    <div class="card border-0">
+                        <img src="images/outros_jogos/b4b.png" class="card-img-top" alt="">
+                        <div class="card-body backtext p-2">
+                            <p class="card-text fw-bold text-white m-0 size_p">Back 4 Blood</p>
+                            <p class="text-white m-0 size_p2">R$ 199,90</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" style="width: 18rem;">
+                    <div class="card border-0">
+                        <img src="images/outros_jogos/avatar.png" class="card-img-top" alt="">
+                        <div class="card-body backtext p-2">
+                            <p class="card-text fw-bold text-white m-0 size_p">Avatar Frontiers of...</p>
+                            <p class="text-white m-0 size_p2">R$ 199,90</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" style="width: 18rem;">
+                    <div class="card border-0">
+                        <img src="images/outros_jogos/asseto.png" class="card-img-top" alt="">
+                        <div class="card-body backtext p-2">
+                            <p class="card-text fw-bold text-white m-0 size_p">Assetto Corsa</p>
+                            <p class="text-white m-0 size_p2">R$ 199,90</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" style="width: 18rem;">
+                    <div class="card border-0">
+                        <img src="images/outros_jogos/dying.png" class="card-img-top" alt="">
+                        <div class="card-body backtext p-2">
+                            <p class="card-text fw-bold text-white m-0 size_p">Dying Light</p>
+                            <p class="text-white m-0 size_p2">R$ 199,90</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" style="width: 18rem;">
+                    <div class="card border-0">
+                        <img src="images/outros_jogos/forza.png" class="card-img-top" alt="">
+                        <div class="card-body backtext p-2">
+                            <p class="card-text fw-bold text-white m-0 size_p">Forza Horizon 5</p>
+                            <p class="text-white m-0 size_p2">R$ 199,90</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <a href="" class="text_azul">
+                <p class="row p-2 fw-bold text-white">mostrar mais...</p>
+            </a>
         </div>
     </div>
 </section>
 
-<h1 class="h4 m-3">Recomendados e em destaque</h1>
+<section>
+    <h1 class="h3 fw-bold text-center m-4" id="3">Lançamentos</h1>
+
+    <section class="container text-center d-sm-block d-md-none d-lg-none d-xl-none">
+        <div class="row row-cols-2 justify-content-center">
+                <div class="col mb-3" style="width: 18rem;">
+                    <div class="card border-0">
+                        <img src="images/outros_jogos/dbd.png" class="card-img-top" alt="">
+                        <div class="card-body backtext p-2">
+                            <div>
+                                <p class="card-text fw-bold text-white m-0 size_p">Dead by Daylight</p>
+                                <p class="text-white m-0 size_p2">R$ 199,90</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-3" style="width: 18rem;">
+                    <div class="card border-0">
+                        <img src="images/outros_jogos/eldenring.png" class="card-img-top" alt="">
+                        <div class="card-body backtext p-2">
+                            <div>
+                                <p class="card-text fw-bold text-white m-0 size_p">Dead by Daylight</p>
+                                <p class="text-white m-0 size_p2">R$ 199,90</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" style="width: 18rem;">
+                    <div class="card border-0">
+                        <img src="images/outros_jogos/csgo.png" class="card-img-top" alt="">
+                        <div class="card-body backtext p-2">
+                            <p class="card-text fw-bold text-white m-0 size_p">Counter Strike 2</p>
+                            <p class="text-white m-0 size_p2">R$ 199,90</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <a href="" class="text_azul">
+                <p class="row p-2 fw-bold text-white">mostrar mais...</p>
+            </a>
+        </div>
+    </section>
+
+    <div class="d-xl-none d-sm-none d-none d-md-block">
+        <div class="container d-flex justify-content-center">
+            <div class="row">
+                <div class="col" style="width: 18rem;">
+                    <div class="card border-0">
+                        <img src="images/outros_jogos/deadisland2.png" class="card-img-top" alt="">
+                        <div class="card-body backtext p-2">
+                            <p class="card-text fw-bold text-white m-0 size_p">Dead Island 2</p>
+                            <p class="text-white m-0 size_p2">R$ 199,90</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" style="width: 18rem;">
+                    <div class="card border-0">
+                        <img src="images/outros_jogos/hades2.png" class="card-img-top" alt="">
+                        <div class="card-body backtext p-2">
+                            <p class="card-text fw-bold text-white m-0 size_p">Hades 2</p>
+                            <p class="text-white m-0 size_p2">R$ 199,90</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" style="width: 18rem;">
+                    <div class="card border-0">
+                        <img src="images/outros_jogos/Vrising.png" class="card-img-top" alt="">
+                        <div class="card-body backtext p-2">
+                            <p class="card-text fw-bold text-white m-0 size_p">V Rising</p>
+                            <p class="text-white m-0 size_p2">R$ 199,90</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <a href="" class="text_azul">
+                <p class="row p-2 fw-bold text-white">mostrar mais...</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="d-none d-md-none d-lg-none d-xl-block">
+        <div class="container d-flex justify-content-center">
+            <div class="row">
+                <div class="col" style="width: 18rem;">
+                    <div class="card border-0">
+                        <img src="images/outros_jogos/deadisland2.png" class="card-img-top" alt="">
+                        <div class="card-body backtext p-2">
+                            <p class="card-text fw-bold text-white m-0 size_p">Dead Island 2</p>
+                            <p class="text-white m-0 size_p2">R$ 199,90</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" style="width: 18rem;">
+                    <div class="card border-0">
+                        <img src="images/outros_jogos/hades2.png" class="card-img-top" alt="">
+                        <div class="card-body backtext p-2">
+                            <p class="card-text fw-bold text-white m-0 size_p">Hades 2</p>
+                            <p class="text-white m-0 size_p2">R$ 199,90</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" style="width: 18rem;">
+                    <div class="card border-0">
+                        <img src="images/outros_jogos/Vrising.png" class="card-img-top" alt="">
+                        <div class="card-body backtext p-2">
+                            <p class="card-text fw-bold text-white m-0 size_p">V Rising</p>
+                            <p class="text-white m-0 size_p2">R$ 199,90</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" style="width: 18rem;">
+                    <div class="card border-0">
+                        <img src="images/outros_jogos/tekken8.png" class="card-img-top" alt="">
+                        <div class="card-body backtext p-2">
+                            <p class="card-text fw-bold text-white m-0 size_p">Tekken 8</p>
+                            <p class="text-white m-0 size_p2">R$ 199,90</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" style="width: 18rem;">
+                    <div class="card border-0">
+                        <img src="images/outros_jogos/dragon.png" class="card-img-top" alt="">
+                        <div class="card-body backtext p-2">
+                            <p class="card-text fw-bold text-white m-0 size_p">Dragon ball Sparking Zero</p>
+                            <p class="text-white m-0 size_p2">R$ 199,90</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <a href="" class="text_azul">
+                <p class="row p-2 fw-bold text-white">mostrar mais...</p>
+            </a>
+        </div>
+    </div>
+</section>

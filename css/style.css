@@ -1,7 +1,7 @@
 body {
   font-family: "Inter Tight", sans-serif;
   color: #FFFFFF;
-  background-color: #0C041E;
+  background-color: #110727;
 }
 
 .header_text {
@@ -28,11 +28,21 @@ body {
 
 .size_img2 {
   width: 100%;
-  border-radius: 4px;
+  border-radius: 0px;
+}
+
+.size_p {
+  font-size: 18px;
+  padding-left: 6px;
+}
+
+.size_p2 {
+  font-size: 14px;
+  padding-left: 6px;
 }
 
 .backtext {
-  background: linear-gradient(180deg, #3e007d 0%, #0d001f 100%);
+  background: #2e1653;
   -webkit-box-shadow: 0px 0px 10px -3px #3c005c;
   -moz-box-shadow: 0px 0px 10px -3px #3c005c;
   box-shadow: 0px 0px 10px -3px #3c005c;
@@ -46,6 +56,40 @@ body {
   .size_img {
     width: 35%;
   }
+}
+footer {
+  background-color: var(--vermelho);
+  padding: 16px;
+  margin-top: 32px;
+}
+footer .infos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--branco);
+}
+footer .infos div {
+  text-align: center;
+}
+footer a {
+  color: var(--branco);
+  text-decoration: none;
+}
+footer h3 {
+  font-weight: bold;
+  padding-bottom: 8px;
+}
+footer .creditos {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  color: var(--branco);
+}
+
+.card_w {
+  width: 280px;
 }
 
 /*# sourceMappingURL=style.css.map */
