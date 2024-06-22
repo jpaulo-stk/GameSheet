@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Game Sheet</title>
+
+    <base href="http://localhost/gamesheet/">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,9 +29,8 @@
 
     $dadosAPI = file_get_contents($url);
 
-    $dadosJogos = json_decode($dadosAPI)
-    ?>
-
+    $dadosGames = json_decode($dadosAPI);
+?>
     <header>
         <nav class="navbar navbar-expand-lg header_back" data-bs-theme="dark">
             <div class="container-fluid">
@@ -39,20 +41,21 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link text-white header_text" aria-current="page" href="index.php?pages=home">Home</a>
+                            <a class="nav-link text-white header_text" aria-current="page" href="home">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white header_text" href="equipe">Equipe</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-white header_text" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Games
+                                Jogos Gratuitos
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item header_text" href="jogosPage">Jogos Gratuitos</a></li>
-                                <li><a class="dropdown-item header_text" href="#1">Destaques</a></li>
-                                <li><a class="dropdown-item header_text" href="#2">Promoções</a></li>
-                                <li><a class="dropdown-item header_text" href="#3">Lançamentos</a></li>
+                                <?php 
+                                    foreach($dadosGames as $dados){
+                                        echo "<li><a class='dropdown-item' href='game/{$dados->id_game}'>{$dados->nome}</a></li>";
+                                    }
+                                ?>
                             </ul>
                         </li>
                     </ul>
@@ -67,22 +70,19 @@
 
     <main>
         <?php
-        //imprimir o conteudo do array do GET
-        //print_r($_GET);
-        if (isset($_GET["param"])) {
-            $param = $_GET["param"];
+        
+        $pagina = "home";
+
+        if (isset($_GET["pagina"])) {
+            $pagina = $_GET["pagina"] ?? "home";
     
-            $p = explode("/", $param);
+            $pagina = explode("/", $pagina);
+
+            $codigo = $pagina[1] ?? null;
+            $pagina = $pagina[0] ?? "home";
         }
     
-        $page = $p[0] ?? "home";
-        $jogo = $p[1] ?? null;
-    
-        if ($page == "jogos") {
-            $pagina = "jogos/{$jogo}.php";
-        } else {
-            $pagina = "pages/{$page}.php";
-        }
+        $pagina = "pages/{$pagina}.php";
     
         if (file_exists($pagina)) {
             include $pagina;

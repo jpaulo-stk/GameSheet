@@ -1,12 +1,8 @@
 <?php
 $url = "http://localhost/gamesheet/api/banners.php";
-$url2 = "http://localhost/gamesheet/api/banners_game_free.php";
 
 $dadosAPI = file_get_contents($url);
 $dadosBanner = json_decode($dadosAPI);
-
-$dadosAPI2 = file_get_contents($url2);
-$dadosBanner2 = json_decode($dadosAPI2);
 ?>
 
 <!-- Slider main container -->
@@ -19,7 +15,7 @@ $dadosBanner2 = json_decode($dadosAPI2);
         foreach ($dadosBanner as $dados) {
         ?>
             <div class="swiper-slide text-center">
-                <a href="<?= $dados->id_game ?>"><img src="<?= $dados->imagem ?>" class="size_img" alt="<?= $dados->nome ?>">
+                <a href="jogos"><img src="<?= $dados->imagem ?>" class="size_img" alt="<?= $dados->nome ?>">
                 </a>
             </div>
         <?php
@@ -56,15 +52,15 @@ $dadosBanner2 = json_decode($dadosAPI2);
         </button>
     </div>
 </div>
-
+        
 <section class="container d-none d-sm-none d-md-block">
     <div class="glide">
         <div class="glide__track" data-glide-el="track">
             <ul class="glide__slides">
                 <?php
-                foreach ($dadosBanner2 as $dados2) {
+                foreach ($dadosGames as $dados2) {
                 ?>
-                    <li class="glide__slide card border-0"><a href="<?= $dados2->id_game ?>" class="text_azul"><img src="<?= $dados2->imagem ?>" class="card-img-top size_img2" alt="<?= $dados2->nome ?>">
+                    <li class="glide__slide card border-0"><a href="game/<?= $dados2->id_game?>" class="text_azul"><img src="<?= $dados2->card?>" class="card-img-top size_img2" alt="<?= $dados2->nome ?>">
                             <div class="card-body backtext p-2">
                                 <p class="card-text fw-bold text-white m-0 size_p"><?= $dados2->nome ?></p>
                                 <p class="text-white m-0 size_p2">Gratuito para jogar</p>
@@ -85,37 +81,37 @@ $dadosBanner2 = json_decode($dadosAPI2);
 
     <section class="container text-center d-sm-block d-md-none d-lg-none d-xl-none">
         <div class="row row-cols-2 justify-content-center">
-                <div class="col mb-3" style="width: 18rem;">
-                    <div class="card border-0">
-                        <img src="images/outros_jogos/dbd.png" class="card-img-top" alt="">
-                        <div class="card-body backtext p-2">
-                            <div>
-                                <p class="card-text fw-bold text-white m-0 size_p">Dead by Daylight</p>
-                                <p class="text-white m-0 size_p2">R$ 199,90</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-3" style="width: 18rem;">
-                    <div class="card border-0">
-                        <img src="images/outros_jogos/eldenring.png" class="card-img-top" alt="">
-                        <div class="card-body backtext p-2">
-                            <div>
-                                <p class="card-text fw-bold text-white m-0 size_p">Dead by Daylight</p>
-                                <p class="text-white m-0 size_p2">R$ 199,90</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col" style="width: 18rem;">
-                    <div class="card border-0">
-                        <img src="images/outros_jogos/csgo.png" class="card-img-top" alt="">
-                        <div class="card-body backtext p-2">
-                            <p class="card-text fw-bold text-white m-0 size_p">Counter Strike 2</p>
+            <div class="col mb-3" style="width: 18rem;">
+                <div class="card border-0">
+                    <img src="images/outros_jogos/dbd.png" class="card-img-top" alt="">
+                    <div class="card-body backtext p-2">
+                        <div>
+                            <p class="card-text fw-bold text-white m-0 size_p">Dead by Daylight</p>
                             <p class="text-white m-0 size_p2">R$ 199,90</p>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="col mb-3" style="width: 18rem;">
+                <div class="card border-0">
+                    <img src="images/outros_jogos/eldenring.png" class="card-img-top" alt="">
+                    <div class="card-body backtext p-2">
+                        <div>
+                            <p class="card-text fw-bold text-white m-0 size_p">Dead by Daylight</p>
+                            <p class="text-white m-0 size_p2">R$ 199,90</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" style="width: 18rem;">
+                <div class="card border-0">
+                    <img src="images/outros_jogos/csgo.png" class="card-img-top" alt="">
+                    <div class="card-body backtext p-2">
+                        <p class="card-text fw-bold text-white m-0 size_p">Counter Strike 2</p>
+                        <p class="text-white m-0 size_p2">R$ 199,90</p>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="d-flex justify-content-center">
             <a href="" class="text_azul">
@@ -224,43 +220,43 @@ $dadosBanner2 = json_decode($dadosAPI2);
         </div>
     </div>
 </section>
-                
+
 <section>
     <h1 class="h3 fw-bold text-center m-4" id="2">Jogos em Promoção</h1>
 
     <section class="container text-center d-sm-block d-md-none d-lg-none d-xl-none">
         <div class="row row-cols-2 justify-content-center">
-                <div class="col mb-3" style="width: 18rem;">
-                    <div class="card border-0">
-                        <img src="images/outros_jogos/dbd.png" class="card-img-top" alt="">
-                        <div class="card-body backtext p-2">
-                            <div>
-                                <p class="card-text fw-bold text-white m-0 size_p">Dead by Daylight</p>
-                                <p class="text-white m-0 size_p2">R$ 199,90</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-3" style="width: 18rem;">
-                    <div class="card border-0">
-                        <img src="images/outros_jogos/eldenring.png" class="card-img-top" alt="">
-                        <div class="card-body backtext p-2">
-                            <div>
-                                <p class="card-text fw-bold text-white m-0 size_p">Dead by Daylight</p>
-                                <p class="text-white m-0 size_p2">R$ 199,90</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col" style="width: 18rem;">
-                    <div class="card border-0">
-                        <img src="images/outros_jogos/csgo.png" class="card-img-top" alt="">
-                        <div class="card-body backtext p-2">
-                            <p class="card-text fw-bold text-white m-0 size_p">Counter Strike 2</p>
+            <div class="col mb-3" style="width: 18rem;">
+                <div class="card border-0">
+                    <img src="images/outros_jogos/dbd.png" class="card-img-top" alt="">
+                    <div class="card-body backtext p-2">
+                        <div>
+                            <p class="card-text fw-bold text-white m-0 size_p">Dead by Daylight</p>
                             <p class="text-white m-0 size_p2">R$ 199,90</p>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="col mb-3" style="width: 18rem;">
+                <div class="card border-0">
+                    <img src="images/outros_jogos/eldenring.png" class="card-img-top" alt="">
+                    <div class="card-body backtext p-2">
+                        <div>
+                            <p class="card-text fw-bold text-white m-0 size_p">Dead by Daylight</p>
+                            <p class="text-white m-0 size_p2">R$ 199,90</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" style="width: 18rem;">
+                <div class="card border-0">
+                    <img src="images/outros_jogos/csgo.png" class="card-img-top" alt="">
+                    <div class="card-body backtext p-2">
+                        <p class="card-text fw-bold text-white m-0 size_p">Counter Strike 2</p>
+                        <p class="text-white m-0 size_p2">R$ 199,90</p>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="d-flex justify-content-center">
             <a href="" class="text_azul">
@@ -371,37 +367,37 @@ $dadosBanner2 = json_decode($dadosAPI2);
 
     <section class="container text-center d-sm-block d-md-none d-lg-none d-xl-none">
         <div class="row row-cols-2 justify-content-center">
-                <div class="col mb-3" style="width: 18rem;">
-                    <div class="card border-0">
-                        <img src="images/outros_jogos/dbd.png" class="card-img-top" alt="">
-                        <div class="card-body backtext p-2">
-                            <div>
-                                <p class="card-text fw-bold text-white m-0 size_p">Dead by Daylight</p>
-                                <p class="text-white m-0 size_p2">R$ 199,90</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-3" style="width: 18rem;">
-                    <div class="card border-0">
-                        <img src="images/outros_jogos/eldenring.png" class="card-img-top" alt="">
-                        <div class="card-body backtext p-2">
-                            <div>
-                                <p class="card-text fw-bold text-white m-0 size_p">Dead by Daylight</p>
-                                <p class="text-white m-0 size_p2">R$ 199,90</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col" style="width: 18rem;">
-                    <div class="card border-0">
-                        <img src="images/outros_jogos/csgo.png" class="card-img-top" alt="">
-                        <div class="card-body backtext p-2">
-                            <p class="card-text fw-bold text-white m-0 size_p">Counter Strike 2</p>
+            <div class="col mb-3" style="width: 18rem;">
+                <div class="card border-0">
+                    <img src="images/outros_jogos/dbd.png" class="card-img-top" alt="">
+                    <div class="card-body backtext p-2">
+                        <div>
+                            <p class="card-text fw-bold text-white m-0 size_p">Dead by Daylight</p>
                             <p class="text-white m-0 size_p2">R$ 199,90</p>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="col mb-3" style="width: 18rem;">
+                <div class="card border-0">
+                    <img src="images/outros_jogos/eldenring.png" class="card-img-top" alt="">
+                    <div class="card-body backtext p-2">
+                        <div>
+                            <p class="card-text fw-bold text-white m-0 size_p">Dead by Daylight</p>
+                            <p class="text-white m-0 size_p2">R$ 199,90</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" style="width: 18rem;">
+                <div class="card border-0">
+                    <img src="images/outros_jogos/csgo.png" class="card-img-top" alt="">
+                    <div class="card-body backtext p-2">
+                        <p class="card-text fw-bold text-white m-0 size_p">Counter Strike 2</p>
+                        <p class="text-white m-0 size_p2">R$ 199,90</p>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="d-flex justify-content-center">
             <a href="" class="text_azul">
