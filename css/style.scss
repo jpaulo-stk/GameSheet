@@ -5,9 +5,8 @@ $color: #FFFFFF;
 body {
     font-family: $font;
     color: $color;
-    background-color: #110727;
+    background-color: #1f1042;
 }
-
 .header_text {
     font-family: $font;
     font-weight: 600;
@@ -46,20 +45,56 @@ body {
     
 }
 
+.joao {
+    -webkit-box-shadow: 0px 0px 15px -1px rgb(0, 0, 0);
+    -moz-box-shadow: 0px 0px 15px -1px rgb(0, 0, 0);
+    box-shadow: 0px 0px 15px -1px rgb(0, 0, 0);
+}
+
+.game_img {
+    width: 40%;
+}
+
+.jogar {
+    margin-left: 35%;
+    margin-right: 35%;
+}
+
 .backtext {
-    background: rgb(46, 22, 83);
-    -webkit-box-shadow: 0px 0px 10px -3px rgba(60, 0, 92, 1);
-    -moz-box-shadow: 0px 0px 10px -3px rgba(60, 0, 92, 1);
-    box-shadow: 0px 0px 10px -3px rgba(60, 0, 92, 1);
+    background: rgb(15, 10, 59);
+    -webkit-box-shadow: 0px 0px 15px -1px rgb(0, 0, 0);
+    -moz-box-shadow: 0px 0px 15px -1px rgb(0, 0, 0);
+    box-shadow: 0px 0px 15px -1px rgb(0, 0, 0);
+}
+
+.back_ground {
+    background: rgb(15, 10, 59);
 }
 
 .text_azul {
     text-decoration: none;
 }
 
+.game_back {
+    background: rgb(37,103,52);
+background: linear-gradient(98deg, rgba(37,103,52,1) 0%, rgba(40,79,49,1) 100%);
+}
+
+.game_back2 {
+    background: rgb(37,48,104);
+background: linear-gradient(90deg, rgba(37,48,104,1) 0%, rgba(40,44,80,1) 100%);
+}
+
 @media (min-width: 994px) {
     .size_img {
         width: 35%;
+    }
+}
+
+@media (max-width: 1400px) {
+    .jogar {
+        margin-left: 28%;
+        margin-right: 28%;
     }
 }
 
@@ -103,3 +138,8 @@ footer {
 .card_w {
     width: 280px;
 }
+
+.back_card_m {
+    background-color: #1f1042;
+}
+

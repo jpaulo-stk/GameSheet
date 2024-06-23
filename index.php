@@ -30,7 +30,7 @@
     $dadosAPI = file_get_contents($url);
 
     $dadosGames = json_decode($dadosAPI);
-?>
+    ?>
     <header>
         <nav class="navbar navbar-expand-lg header_back" data-bs-theme="dark">
             <div class="container-fluid">
@@ -51,10 +51,10 @@
                                 Jogos Gratuitos
                             </a>
                             <ul class="dropdown-menu">
-                                <?php 
-                                    foreach($dadosGames as $dados){
-                                        echo "<li><a class='dropdown-item' href='game/{$dados->id_game}'>{$dados->nome}</a></li>";
-                                    }
+                                <?php
+                                foreach ($dadosGames as $dados) {
+                                    echo "<li><a class='dropdown-item' href='game/{$dados->id_game}'>{$dados->nome}</a></li>";
+                                }
                                 ?>
                             </ul>
                         </li>
@@ -65,25 +65,28 @@
                     </form>
                 </div>
             </div>
+
         </nav>
+        <hr class="m-0 mb-2" style="border: 1px solid; ">
     </header>
+
 
     <main>
         <?php
-        
+
         $pagina = "home";
 
         if (isset($_GET["pagina"])) {
             $pagina = $_GET["pagina"] ?? "home";
-    
+
             $pagina = explode("/", $pagina);
 
             $codigo = $pagina[1] ?? null;
             $pagina = $pagina[0] ?? "home";
         }
-    
+
         $pagina = "pages/{$pagina}.php";
-    
+
         if (file_exists($pagina)) {
             include $pagina;
         } else {
@@ -92,7 +95,9 @@
         ?>
     </main>
 
+    <hr class="m-0 mt-2" style="border: 1px solid; ">
     <footer>
+        
         <section class="infos">
             <div>
                 <h3>Redes Sociais</h3>
@@ -109,12 +114,24 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/glide/node_modules/@glidejs/glide/dist/glide.min.js"></script>
     <script src="js/fslightbox/node_modules/fslightbox/index.js"></script>
+    <script src="https://kit.fontawesome.com/181ad36814.js" crossorigin="anonymous"></script>
+
 
 
     <script>
+        const toastTrigger = document.getElementById('liveToastBtn')
+        const toastLiveExample = document.getElementById('liveToast')
+
+        if (toastTrigger) {
+            const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+            toastTrigger.addEventListener('click', () => {
+                toastBootstrap.show()
+            })
+        }
         const swiper = new Swiper('.swiper', {
             // Optional parameters
             direction: 'horizontal',
@@ -152,13 +169,7 @@
         };
 
         new Glide('.glide', config).mount()
-
-        
     </script>
-
-
-    <script src="https://kit.fontawesome.com/181ad36814.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 
 </html>

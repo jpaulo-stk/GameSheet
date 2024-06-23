@@ -1,7 +1,7 @@
 body {
   font-family: "Inter Tight", sans-serif;
   color: #FFFFFF;
-  background-color: #110727;
+  background-color: #1f1042;
 }
 
 .header_text {
@@ -41,20 +41,55 @@ body {
   padding-left: 6px;
 }
 
+.joao {
+  -webkit-box-shadow: 0px 0px 15px -1px black;
+  -moz-box-shadow: 0px 0px 15px -1px black;
+  box-shadow: 0px 0px 15px -1px black;
+}
+
+.game_img {
+  width: 40%;
+}
+
+.jogar {
+  margin-left: 35%;
+  margin-right: 35%;
+}
+
 .backtext {
-  background: #2e1653;
-  -webkit-box-shadow: 0px 0px 10px -3px #3c005c;
-  -moz-box-shadow: 0px 0px 10px -3px #3c005c;
-  box-shadow: 0px 0px 10px -3px #3c005c;
+  background: #0f0a3b;
+  -webkit-box-shadow: 0px 0px 15px -1px black;
+  -moz-box-shadow: 0px 0px 15px -1px black;
+  box-shadow: 0px 0px 15px -1px black;
+}
+
+.back_ground {
+  background: #0f0a3b;
 }
 
 .text_azul {
   text-decoration: none;
 }
 
+.game_back {
+  background: #256734;
+  background: linear-gradient(98deg, #256734 0%, #284f31 100%);
+}
+
+.game_back2 {
+  background: #253068;
+  background: linear-gradient(90deg, #253068 0%, #282c50 100%);
+}
+
 @media (min-width: 994px) {
   .size_img {
     width: 35%;
+  }
+}
+@media (max-width: 1400px) {
+  .jogar {
+    margin-left: 28%;
+    margin-right: 28%;
   }
 }
 footer {
@@ -90,6 +125,10 @@ footer .creditos {
 
 .card_w {
   width: 280px;
+}
+
+.back_card_m {
+  background-color: #1f1042;
 }
 
 /*# sourceMappingURL=style.css.map */

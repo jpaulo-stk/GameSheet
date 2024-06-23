@@ -55,13 +55,13 @@ $dadosBanner = json_decode($dadosAPI);
         
 <section class="container d-none d-sm-none d-md-block">
     <div class="glide">
-        <div class="glide__track" data-glide-el="track">
-            <ul class="glide__slides">
+        <div class="glide__track joao" data-glide-el="track">
+            <ul class="glide__slides ">
                 <?php
                 foreach ($dadosGames as $dados2) {
                 ?>
-                    <li class="glide__slide card border-0"><a href="game/<?= $dados2->id_game?>" class="text_azul"><img src="<?= $dados2->card?>" class="card-img-top size_img2" alt="<?= $dados2->nome ?>">
-                            <div class="card-body backtext p-2">
+                    <li class="glide__slide card border-0 joao"><a href="game/<?= $dados2->id_game?>" class="text_azul"><img src="<?= $dados2->card?>" class="card-img-top size_img2" alt="<?= $dados2->nome ?>">
+                            <div class="card-body back_ground p-2">
                                 <p class="card-text fw-bold text-white m-0 size_p"><?= $dados2->nome ?></p>
                                 <p class="text-white m-0 size_p2">Gratuito para jogar</p>
                             </div>

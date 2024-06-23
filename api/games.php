@@ -8,7 +8,9 @@ $jogo[1] = array(
     "descricao" => "O classio jogo SNAKE, aonde seu principal objetivo é comer maçãs para aumentar seu tamanho e ficar cada vez mais rapido, dando uma dinamica unica, sensacional e muito classica.",
     "images" => "images/snake/snake1.png",
     "card" => "images/snake/snake_logo1.png",
-    "botao" => "games/snake/index.html"
+    "jogar" => "http://localhost/gamesheet/games/Snake/",
+    "genero" => "Plataforma",
+    "dev" => "João Paulo B. Forastiere"
 );
 
 $jogo[2] = array(
@@ -17,7 +19,9 @@ $jogo[2] = array(
     "descricao" => "Um jogo de caça ao tesouro, onde o jogador precisa encontrar alguns amuletos para conseguir chegar até o tesouro. Jony um desbravador que estava em uma expedição pelo Egito, em busca do tesouro de Necrópole de Saqqura escondido em um outro mundo que existe abaixo das pirâmides de Gize, quando acaba preso em um labirinto de com objetos mortais que dificultam sua caça ao tesouro.Jonny terá que passar por dois níveis até chegar ao tesouro, deve pegar os diamantes para complementar sua fortuna",
     "images" => "images/labFy/labFy3.png",
     "card" => "images/labFy/logo_laby2.png",
-    "botao" => "games/labFyGize/LabFyGize1/index.html"
+    "jogar" => "http://localhost/gamesheet/games/LabFyGize/",
+    "genero" => "Plataforma",
+    "dev" => "Emilly Crisallys"
 );
 
 $jogo[3] = array(
@@ -26,7 +30,9 @@ $jogo[3] = array(
     "descricao" => "Há séculos, um poderoso necromante, conhecido como a Lord Mhaldazzar, governava a região de Valáquia com punho de ferro. No entanto, um grupo de caçadores destemidos liderados pelo lendário Richard Valencourt, conseguiram derrotá-lo e selá-lo em um sono eterno. Por décadas, a região viveu em paz, mas recentemente, rumores de que o selo que mantinha o necromante adormecido estava enfraquecendo e começou a se romper. Em meio ao caos, criaturas das trevas emergiram dos locais mais sombrios da terra, ameaçando mergulhar o mundo na escuridão novamente. O jogador assume o papel de Wuthir Valencourt, um descendente distante de Richard, que herdou a habilidade e a coragem de seus antepassados. Conforme as trevas se espalham pela Valáquia, Wuthir é convocado para enfrentar o mal que se ergue mais uma vez. A jogabilidade mistura elementos de aventura, plataformas e hack and slash, enquanto Wuthir viaja por vastos castelos góticos, florestas sombrias e cidades abandonadas, enfrentando hordas de criaturas demoníacas. Colete relíquias para ajudá-lo em sua jornada e desafie o Necromante.",
     "images" => "images/darkLegacy/darkLegacy4.png",
     "card" => "images/darkLegacy/Dark_Legacy_Logo.png",
-    "botao" => "https://6622df91edda6b399a839e4e--cheery-eclair-11bde3.netlify.app/"
+    "jogar" => "http://localhost/gamesheet/games/DarkLegacy-main/index3.html",
+    "genero" => "Plataforma",
+    "dev" => "Lieslei A. Navaro"
 );
 
 $jogo[4] = array(
@@ -35,7 +41,9 @@ $jogo[4] = array(
     "descricao" => "Embarque em uma jornada assustadora através de um mundo 2D repleto de perigos e mistérios. Inspirado pelos grandes clássicos de survival horror como Resident Evil e The Last of Us, este jogo desenvolvido pelo PixelPulse Studios traz uma experiência única de terror e suspense. Encare desafios intensos, explore ambientes sombrios e descubra segredos macabros enquanto luta pela sobrevivência neste jogo emocionante.",
     "images" => "images/TLW/lastWord4.png",
     "card" => "images/TLW/logoTLW.png",
-    "botao" => "games/TLW/index.html"
+    "jogar" => "http://localhost/gamesheet/games/TLW/",
+    "genero" => "Plataforma",
+    "dev" => "Vinicius Ferreira"
 );
 
 $jogo[5] = array(
@@ -44,7 +52,9 @@ $jogo[5] = array(
     "descricao" => "A terra está sob ameaça por membros de outros planetas devido a um conflito galático, proteja a Terra em sua nave XL7 de ataques e derrote o vilão Etron para que ele não destrua a sua casa.",
     "images" => "images/galaxyAttack/LogoXX.jpg",
     "card" => "images/galaxyAttack/logo.png",
-    "botao" => "games/GalacticAttack/index.html"
+    "jogar" => "http://localhost/gamesheet/games/GalacticAttack/",
+    "genero" => "Space combat",
+    "dev" => "Milena Santos de Oliveira"
 );
 
 $jogo[6] = array(
@@ -53,6 +63,8 @@ $jogo[6] = array(
     "descricao" => "você é um habilidoso shinobi em um jogo 2D, lutando contra hordas de esqueletos. Acumule pontos derrotando inimigos cada vez mais desafiadores. Alcance a pontuação final para vencer e trazer paz ao mundo assombrado",
     "images" => "images/arteDaOcu/logoimg.png",
     "card" => "images/arteDaOcu/logo_miniatura.png",
-    "botao" => "games/jogothiago/index.html"
+    "jogar" => "http://localhost/gamesheet/games/jogothiago/",
+    "genero" => "Plataforma",
+    "dev" => "Thiago Borges da o Cu"
 );
 echo json_encode($jogo);
