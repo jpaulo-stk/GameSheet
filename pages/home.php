@@ -6,7 +6,7 @@ $dadosBanner = json_decode($dadosAPI);
 ?>
 
 <!-- Slider main container -->
-<div class="swiper">
+<div data-aos="zoom-in" class="swiper">
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
 
@@ -53,8 +53,8 @@ $dadosBanner = json_decode($dadosAPI);
     </div>
 </div>
         
-<section class="container d-none d-sm-none d-md-block">
-    <div class="glide">
+<section data-aos="fade-right" class="container d-none d-sm-none d-md-block">
+    <div class="glide" data-aos="fade-up">
         <div class="glide__track joao" data-glide-el="track">
             <ul class="glide__slides ">
                 <?php
@@ -76,7 +76,7 @@ $dadosBanner = json_decode($dadosAPI);
 </section>
 
 <!-- bagunca -->
-<section>
+<section data-aos="fade-up">
     <h1 class="h3 fw-bold text-center m-4 mt-5" id="1">Recomendados e em destaque</h1>
 
     <section class="container text-center d-sm-block d-md-none d-lg-none d-xl-none">
@@ -221,7 +221,7 @@ $dadosBanner = json_decode($dadosAPI);
     </div>
 </section>
 
-<section>
+<section data-aos="fade-up">
     <h1 class="h3 fw-bold text-center m-4" id="2">Jogos em Promoção</h1>
 
     <section class="container text-center d-sm-block d-md-none d-lg-none d-xl-none">
@@ -362,7 +362,7 @@ $dadosBanner = json_decode($dadosAPI);
     </div>
 </section>
 
-<section>
+<section data-aos="fade-up">
     <h1 class="h3 fw-bold text-center m-4" id="3">Lançamentos</h1>
 
     <section class="container text-center d-sm-block d-md-none d-lg-none d-xl-none">

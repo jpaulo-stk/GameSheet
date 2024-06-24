@@ -18,6 +18,7 @@
 
     <link rel="stylesheet" href="js/glide/node_modules/@glidejs/glide/dist/css/glide.core.min.css">
     <link rel="stylesheet" href="js/glide/node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
 
@@ -53,7 +54,7 @@
                             <ul class="dropdown-menu">
                                 <?php
                                 foreach ($dadosGames as $dados) {
-                                    echo "<li><a class='dropdown-item' href='game/{$dados->id_game}'>{$dados->nome}</a></li>";
+                                    echo "<li><a class='dropdown-item fw-bold' href='game/{$dados->id_game}'>{$dados->nome}</a></li>";
                                 }
                                 ?>
                             </ul>
@@ -119,10 +120,13 @@
     <script src="js/glide/node_modules/@glidejs/glide/dist/glide.min.js"></script>
     <script src="js/fslightbox/node_modules/fslightbox/index.js"></script>
     <script src="https://kit.fontawesome.com/181ad36814.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 
 
     <script>
+        AOS.init();
+
         const toastTrigger = document.getElementById('liveToastBtn')
         const toastLiveExample = document.getElementById('liveToast')
 

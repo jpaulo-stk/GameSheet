@@ -30,7 +30,7 @@ $jogo[3] = array(
     "descricao" => "Há séculos, um poderoso necromante, conhecido como a Lord Mhaldazzar, governava a região de Valáquia com punho de ferro. No entanto, um grupo de caçadores destemidos liderados pelo lendário Richard Valencourt, conseguiram derrotá-lo e selá-lo em um sono eterno. Por décadas, a região viveu em paz, mas recentemente, rumores de que o selo que mantinha o necromante adormecido estava enfraquecendo e começou a se romper. Em meio ao caos, criaturas das trevas emergiram dos locais mais sombrios da terra, ameaçando mergulhar o mundo na escuridão novamente. O jogador assume o papel de Wuthir Valencourt, um descendente distante de Richard, que herdou a habilidade e a coragem de seus antepassados. Conforme as trevas se espalham pela Valáquia, Wuthir é convocado para enfrentar o mal que se ergue mais uma vez. A jogabilidade mistura elementos de aventura, plataformas e hack and slash, enquanto Wuthir viaja por vastos castelos góticos, florestas sombrias e cidades abandonadas, enfrentando hordas de criaturas demoníacas. Colete relíquias para ajudá-lo em sua jornada e desafie o Necromante.",
     "images" => "images/darkLegacy/darkLegacy4.png",
     "card" => "images/darkLegacy/Dark_Legacy_Logo.png",
-    "jogar" => "http://localhost/gamesheet/games/DarkLegacy-main/index3.html",
+    "jogar" => "http://localhost/gamesheet/games/DarkLegacy-main/",
     "genero" => "Plataforma",
     "dev" => "Lieslei A. Navaro"
 );
@@ -65,6 +65,6 @@ $jogo[6] = array(
     "card" => "images/arteDaOcu/logo_miniatura.png",
     "jogar" => "http://localhost/gamesheet/games/jogothiago/",
     "genero" => "Plataforma",
-    "dev" => "Thiago Borges da o Cu"
+    "dev" => "Thiago Borges Fernandes"
 );
 echo json_encode($jogo);

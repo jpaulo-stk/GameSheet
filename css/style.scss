@@ -93,8 +93,21 @@ background: linear-gradient(90deg, rgba(37,48,104,1) 0%, rgba(40,44,80,1) 100%);
 
 @media (max-width: 1400px) {
     .jogar {
-        margin-left: 28%;
-        margin-right: 28%;
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+}
+
+@media (min-width: 994px) {
+    .size_img {
+        width: 35%;
+    }
+}
+
+@media (max-width: 580px) {
+    .div_text_containers {
+        padding-left: 40px;
+        padding-right: 40px;
     }
 }
 
