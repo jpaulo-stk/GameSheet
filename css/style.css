@@ -86,6 +86,11 @@ body {
   background: linear-gradient(90deg, #562568 0%, #69037b 100%);
 }
 
+.game_back4 {
+  background: #5c2568;
+  background: linear-gradient(90deg, #682525 0%, #7b0303 100%);
+}
+
 @media (min-width: 994px) {
   .size_img {
     width: 35%;
@@ -145,6 +150,16 @@ footer .creditos {
 
 .back_card_m {
   background-color: #1f1042;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+}
+
+textarea {
+  resize: none;
 }
 
 /*# sourceMappingURL=style.css.map */

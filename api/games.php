@@ -54,7 +54,7 @@ $jogo[4] = array(
     "genero" => "Plataforma",
     "dev" => "Vinicius Ferreira",
     "fotoDev" => "images/EQUIPE/vini.png",
-    "siteDev" => "",
+    "siteDev" => "https://viniciius.000webhostapp.com/",
     "desc" => "Desenvolveu o site e jogo The Last Words"
 );
 
@@ -81,8 +81,8 @@ $jogo[6] = array(
     "jogar" => "http://localhost/gamesheet/games/jogothiago/",
     "genero" => "Plataforma",
     "dev" => "Thiago Borges Fernandes",
-    "fotoDev" => "images/EQUIPE/",
-    "siteDev" => "",
+    "fotoDev" => "images/EQUIPE/thiago.png",
+    "siteDev" => "https://gamers-paradisers.000webhostapp.com/",
     "desc" => "Desenvolveu o "
 );
 

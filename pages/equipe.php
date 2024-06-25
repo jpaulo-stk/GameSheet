@@ -1,5 +1,5 @@
-<h1 class="h3 fw-bold text-center m-4" id="3">Equipe</h1>
-<h1 class="h5 fw-bold text-center m-4" id="3">Desenvolvedores dos jogos gratuitos</h1>
+<h1 class="h3 fw-bold text-center m-4">Equipe</h1>
+<h1 class="h5 fw-bold text-center m-4">Desenvolvedores dos jogos gratuitos</h1>
 
 
 <div class="justify-content-center d-flex row">

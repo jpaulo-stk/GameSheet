@@ -59,11 +59,14 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link text-white header_text" aria-current="page" href="home">Home</a>
-                        </li>
+                        </li> -->
                         <li class="nav-item">
                             <a class="nav-link text-white header_text" href="equipe">Equipe</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white header_text" href="contato">Contato</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-white header_text" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -118,16 +121,12 @@
                         <input class="form-control me-2 rounded-0 header_text" type="search" placeholder="Pesquisar" aria-label="Search">
                         <button class="btn btn-outline-success btn-outline-light rounded-0" type="submit">Pesquisar</button>
                     </form>
-                    <a class="text_azul ms-2" href="http://localhost/gamesheet/contato">
-                        <button class="btn btn-outline-success btn-outline-light rounded-0 header_text" type="submit">Contato</button>
-                    </a>
                 </div>
             </div>
 
         </nav>
         <hr class="m-0 mb-2" style="border: 1px solid; ">
     </header>
-
 
     <main>
         <?php
@@ -178,8 +177,7 @@
     <script src="js/fslightbox/node_modules/fslightbox/index.js"></script>
     <script src="https://kit.fontawesome.com/181ad36814.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-
+    
 
     <script>
         AOS.init();

@@ -1,10 +1,3 @@
-<?php
-$url = "http://localhost/gamesheet/api/banners.php";
-
-$dadosAPI = file_get_contents($url);
-$dadosBanner = json_decode($dadosAPI);
-?>
-
 <!-- Slider main container -->
 <div data-aos="zoom-in" class="swiper">
     <!-- Additional required wrapper -->
@@ -12,10 +5,10 @@ $dadosBanner = json_decode($dadosAPI);
 
         <!-- Slides -->
         <?php
-        foreach ($dadosBanner as $dados) {
+        foreach ($dadosGames as $dados) {
         ?>
             <div class="swiper-slide text-center">
-                <a href="jogos"><img src="<?= $dados->imagem ?>" class="size_img" alt="<?= $dados->nome ?>">
+                <a href="jogos"><img src="<?= $dados->images ?>" class="size_img" alt="<?= $dados->nome ?>">
                 </a>
             </div>
         <?php
@@ -77,7 +70,7 @@ $dadosBanner = json_decode($dadosAPI);
 
 <!-- bagunca -->
 <section data-aos="fade-up">
-    <h1 class="h3 fw-bold text-center m-4 mt-5" id="1">Recomendados</h1>
+    <h1 class="h3 fw-bold text-center m-4 mt-5">Recomendados</h1>
 
     <section class="container text-center d-sm-block d-md-none d-lg-none d-xl-none">
         <div class="row row-cols-2 justify-content-center">
@@ -164,7 +157,7 @@ $dadosBanner = json_decode($dadosAPI);
 </section>
 
 <section data-aos="fade-up">
-    <h1 class="h3 fw-bold text-center m-4" id="2">Promoção</h1>
+    <h1 class="h3 fw-bold text-center m-4">Promoção</h1>
 
     <section class="container text-center d-sm-block d-md-none d-lg-none d-xl-none">
         <div class="row row-cols-2 justify-content-center">
@@ -251,7 +244,7 @@ $dadosBanner = json_decode($dadosAPI);
 </section>
 
 <section data-aos="fade-up">
-    <h1 class="h3 fw-bold text-center m-4" id="3">Lançamentos</h1>
+    <h1 class="h3 fw-bold text-center m-4">Lançamentos</h1>
 
     <section class="container text-center d-sm-block d-md-none d-lg-none d-xl-none">
         <div class="row row-cols-2 justify-content-center">
@@ -282,30 +275,29 @@ $dadosBanner = json_decode($dadosAPI);
     </section>
 
     <div class="d-xl-none d-sm-none d-none d-md-block">
-        <div class="container d-flex justify-content-center">
-            <div class="row">
-                <div class="col" style="width: 18rem;">
-                <div class="card border-0 mb-2">
-                    <?php
-                    foreach ($dadosLanca as $key3 => $dados5) {
-                        if ($key3 <= 3) {
-
-                    ?>
-                            <a href="lanca/<?= $dados5->id_game ?>" class="text_azul pb-3 back_card_m">
-                                <img src="<?= $dados5->card ?>" class="card-img-top" alt="">
-                                <div class="card-body backtext p-2">
-                                    <div>
-                                        <p class="card-text fw-bold text-white m-0 size_p"><?= $dados5->nome ?></p>
-                                        <p class="text-white m-0 size_p2">R$<?= $dados5->preco ?></p>
+        <div class="container">
+            <div class="row justify-content-center">
+                <?php
+                foreach ($dadosLanca as $key3 => $dados5) {
+                    if ($key3 <= 3) {
+                ?>
+                        <div class="col" style="width: 18rem;">
+                            <div class="card border-0 mb-2">
+                                <a href="lanca/<?= $dados5->id_game ?>" class="text_azul pb-3 back_card_m">
+                                    <img src="<?= $dados5->card ?>" class="card-img-top" alt="">
+                                    <div class="card-body backtext p-2">
+                                        <div>
+                                            <p class="card-text fw-bold text-white m-0 size_p"><?= $dados5->nome ?></p>
+                                            <p class="text-white m-0 size_p2">R$<?= $dados5->preco ?></p>
+                                        </div>
                                     </div>
-                                </div>
-                            </a>
-                    <?php
-                        }
+                                </a>
+                            </div>
+                        </div>
+                <?php
                     }
-                    ?>
-                </div>
-                </div>
+                }
+                ?>
             </div>
         </div>
     </div>
