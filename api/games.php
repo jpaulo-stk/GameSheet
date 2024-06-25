@@ -83,7 +83,7 @@ $jogo[6] = array(
     "dev" => "Thiago Borges Fernandes",
     "fotoDev" => "images/EQUIPE/thiago.png",
     "siteDev" => "https://gamers-paradisers.000webhostapp.com/",
-    "desc" => "Desenvolveu o "
+    "desc" => "Desenvolveu o site e jogo Arte da Ocultação"
 );
 
 echo json_encode($jogo);
