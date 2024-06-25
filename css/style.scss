@@ -85,6 +85,11 @@ background: linear-gradient(98deg, rgba(37,103,52,1) 0%, rgba(40,79,49,1) 100%);
 background: linear-gradient(90deg, rgba(37,48,104,1) 0%, rgba(40,44,80,1) 100%);
 }
 
+.game_back3 {
+    background: rgb(92, 37, 104);
+background: linear-gradient(90deg, rgb(86, 37, 104) 0%, rgb(105, 3, 123) 100%);
+}
+
 @media (min-width: 994px) {
     .size_img {
         width: 35%;

@@ -81,6 +81,11 @@ body {
   background: linear-gradient(90deg, #253068 0%, #282c50 100%);
 }
 
+.game_back3 {
+  background: #5c2568;
+  background: linear-gradient(90deg, #562568 0%, #69037b 100%);
+}
+
 @media (min-width: 994px) {
   .size_img {
     width: 35%;

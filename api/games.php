@@ -10,7 +10,10 @@ $jogo[1] = array(
     "card" => "images/snake/snake_logo1.png",
     "jogar" => "http://localhost/gamesheet/games/Snake/",
     "genero" => "Plataforma",
-    "dev" => "João Paulo B. Forastiere"
+    "dev" => "João Paulo B. Forastiere",
+    "fotoDev" => "images/EQUIPE/jp.png",
+    "siteDev" => "https://jpaulo-stk.github.io/Snake-Hungry/",
+    "desc" => "Desenvolveu o site e jogo Snake Hungry"
 );
 
 $jogo[2] = array(
@@ -21,7 +24,10 @@ $jogo[2] = array(
     "card" => "images/labFy/logo_laby2.png",
     "jogar" => "http://localhost/gamesheet/games/LabFyGize/",
     "genero" => "Plataforma",
-    "dev" => "Emilly Crisallys"
+    "dev" => "Emilly Crisallys",
+    "fotoDev" => "images/EQUIPE/emily.png",
+    "siteDev" => "https://peaceful-cobbler-6780e6.netlify.app/",
+    "desc" => "Desenvolveu o site e jogo LabFy Gize"
 );
 
 $jogo[3] = array(
@@ -32,7 +38,10 @@ $jogo[3] = array(
     "card" => "images/darkLegacy/Dark_Legacy_Logo.png",
     "jogar" => "http://localhost/gamesheet/games/DarkLegacy-main/",
     "genero" => "Plataforma",
-    "dev" => "Lieslei A. Navaro"
+    "dev" => "Lieslei A. Navaro",
+    "fotoDev" => "images/EQUIPE/lieslei.png",
+    "siteDev" => "https://projeto-jogo-blush.vercel.app/index.html",
+    "desc" => "Desenvolveu o site e jogo Dark Legacy"
 );
 
 $jogo[4] = array(
@@ -43,7 +52,10 @@ $jogo[4] = array(
     "card" => "images/TLW/logoTLW.png",
     "jogar" => "http://localhost/gamesheet/games/TLW/",
     "genero" => "Plataforma",
-    "dev" => "Vinicius Ferreira"
+    "dev" => "Vinicius Ferreira",
+    "fotoDev" => "images/EQUIPE/vini.png",
+    "siteDev" => "",
+    "desc" => "Desenvolveu o site e jogo The Last Words"
 );
 
 $jogo[5] = array(
@@ -54,7 +66,10 @@ $jogo[5] = array(
     "card" => "images/galaxyAttack/logo.png",
     "jogar" => "http://localhost/gamesheet/games/GalacticAttack/",
     "genero" => "Space combat",
-    "dev" => "Milena Santos de Oliveira"
+    "dev" => "Milena Santos de Oliveira",
+    "fotoDev" => "images/EQUIPE/milena.png",
+    "siteDev" => "https://galactic-attack.vercel.app/",
+    "desc" => "Desenvolveu o site e jogo Galactic Attack"
 );
 
 $jogo[6] = array(
@@ -65,6 +80,10 @@ $jogo[6] = array(
     "card" => "images/arteDaOcu/logo_miniatura.png",
     "jogar" => "http://localhost/gamesheet/games/jogothiago/",
     "genero" => "Plataforma",
-    "dev" => "Thiago Borges Fernandes"
+    "dev" => "Thiago Borges Fernandes",
+    "fotoDev" => "images/EQUIPE/",
+    "siteDev" => "",
+    "desc" => "Desenvolveu o "
 );
+
 echo json_encode($jogo);

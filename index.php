@@ -31,11 +31,29 @@
     $dadosAPI = file_get_contents($url);
 
     $dadosGames = json_decode($dadosAPI);
+
+    $url2 = "http://localhost/gamesheet/api/recomendados.php";
+
+    $dadosAPI2 = file_get_contents($url2);
+
+    $dadosRecomendados = json_decode($dadosAPI2);
+
+    $url3 = "http://localhost/gamesheet/api/promo.php";
+
+    $dadosAPI3 = file_get_contents($url3);
+
+    $dadosPromo = json_decode($dadosAPI3);
+
+    $url4 = "http://localhost/gamesheet/api/lanca.php";
+
+    $dadosAPI4 = file_get_contents($url4);
+
+    $dadosLanca = json_decode($dadosAPI4);
     ?>
     <header>
         <nav class="navbar navbar-expand-lg header_back" data-bs-theme="dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.php"><img src="images/Logo 1.svg" alt=""></a>
+                <a class="navbar-brand" href="http://localhost/gamesheet/"><img src="images/Logo 1.svg" alt=""></a>
                 <button class="navbar-toggler rounded-0 shadow-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -49,7 +67,7 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-white header_text" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Jogos Gratuitos
+                                Gratuitos
                             </a>
                             <ul class="dropdown-menu">
                                 <?php
@@ -59,11 +77,50 @@
                                 ?>
                             </ul>
                         </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white header_text" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Recomendados
+                            </a>
+                            <ul class="dropdown-menu">
+                                <?php
+                                foreach ($dadosRecomendados as $dados2) {
+                                    echo "<li><a class='dropdown-item fw-bold' href='recomendados/{$dados2->id_game}'>{$dados2->nome}</a></li>";
+                                }
+                                ?>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white header_text" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Promoção
+                            </a>
+                            <ul class="dropdown-menu">
+                                <?php
+                                foreach ($dadosPromo as $dados3) {
+                                    echo "<li><a class='dropdown-item fw-bold' href='promo/{$dados3->id_game}'>{$dados3->nome}</a></li>";
+                                }
+                                ?>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white header_text" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Lançamentos
+                            </a>
+                            <ul class="dropdown-menu">
+                                <?php
+                                foreach ($dadosLanca as $dados4) {
+                                    echo "<li><a class='dropdown-item fw-bold' href='lanca/{$dados4->id_game}'>{$dados4->nome}</a></li>";
+                                }
+                                ?>
+                            </ul>
+                        </li>
                     </ul>
                     <form class="d-flex" role="search">
                         <input class="form-control me-2 rounded-0 header_text" type="search" placeholder="Pesquisar" aria-label="Search">
-                        <button class="btn btn-outline-success btn-outline-light rounded-0 header_text" type="submit">Pesquisar</button>
+                        <button class="btn btn-outline-success btn-outline-light rounded-0" type="submit">Pesquisar</button>
                     </form>
+                    <a class="text_azul ms-2" href="http://localhost/gamesheet/contato">
+                        <button class="btn btn-outline-success btn-outline-light rounded-0 header_text" type="submit">Contato</button>
+                    </a>
                 </div>
             </div>
 
@@ -98,7 +155,7 @@
 
     <hr class="m-0 mt-2" style="border: 1px solid; ">
     <footer>
-        
+
         <section class="infos">
             <div>
                 <h3>Redes Sociais</h3>
