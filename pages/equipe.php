@@ -7,7 +7,7 @@
         <?php
         foreach ($dadosGames as $dados) {
         ?>
-            <div class="card w-25 m-2 p-0 border-0 joao back_card_m text-white">
+            <div class="card w-25 m-2 p-0 border-0 joao back_card_m text-white" data-aos="zoom-in">
                 <img src="<?= $dados->fotoDev ?>" class="card-img-top" alt="<?= $dados->dev ?>">
 
                 <div class="card-body">

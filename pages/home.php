@@ -8,7 +8,7 @@
         foreach ($dadosGames as $dados) {
         ?>
             <div class="swiper-slide text-center">
-                <a href="jogos"><img src="<?= $dados->images ?>" class="size_img" alt="<?= $dados->nome ?>">
+                <a href="game/<?= $dados->id_game ?>"><img src="<?= $dados->images ?>" class="size_img" alt="<?= $dados->nome ?>">
                 </a>
             </div>
         <?php
@@ -22,31 +22,7 @@
 
 <h1 class="h3 fw-bold text-center m-4">Gratuitos</h1>
 
-<div class="d-lg-none d-xl-none d-md-none d-flex justify-content-center">
-    <div id="carouselExampleAutoplaying" class="carousel slide d-flex w-50" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="images/snake/Snake_Hungry_logo.png" class="d-block w-100" alt="Snake_Hungry">
-            </div>
-            <div class="carousel-item">
-                <img src="images/darkLegacy/DarkLegacyLogo.png" class="d-block w-100" alt="Dark_Legacy">
-            </div>
-            <div class="carousel-item">
-                <img src="images/darkLegacy/DarkLegacyLogo.png" class="d-block w-100" alt="Dark_Legacy">
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-</div>
-
-<section data-aos="fade-right" class="container d-none d-sm-none d-md-block">
+<section data-aos="fade-right" class="container">
     <div class="glide" data-aos="fade-up">
         <div class="glide__track joao" data-glide-el="track">
             <ul class="glide__slides ">
@@ -75,12 +51,12 @@
     <section class="container text-center d-sm-block d-md-none d-lg-none d-xl-none">
         <div class="row row-cols-2 justify-content-center">
             <div class="col" style="width: 18rem;">
-                <div class="card border-0 mb-2">
-                    <?php
-                    foreach ($dadosRecomendados as $key => $dados3) {
-                        if ($key <= 3) {
+                <?php
+                foreach ($dadosRecomendados as $key => $dados3) {
+                    if ($key <= 3) {
 
-                    ?>
+                ?>
+                        <div class="card border-0 mb-2">
                             <a href="recomendados/<?= $dados3->id_game ?>" class="text_azul pb-3 back_card_m">
                                 <img src="<?= $dados3->card ?>" class="card-img-top" alt="">
                                 <div class="card-body backtext p-2">
@@ -90,11 +66,11 @@
                                     </div>
                                 </div>
                             </a>
-                    <?php
-                        }
+                        </div>
+                <?php
                     }
-                    ?>
-                </div>
+                }
+                ?>
             </div>
         </div>
     </section>
@@ -162,12 +138,13 @@
     <section class="container text-center d-sm-block d-md-none d-lg-none d-xl-none">
         <div class="row row-cols-2 justify-content-center">
             <div class="col" style="width: 18rem;">
-                <div class="card border-0 mb-2">
-                    <?php
-                    foreach ($dadosPromo as $key2 => $dados4) {
-                        if ($key2 <= 3) {
 
-                    ?>
+                <?php
+                foreach ($dadosPromo as $key2 => $dados4) {
+                    if ($key2 <= 3) {
+
+                ?>
+                        <div class="card border-0 mb-2">
                             <a href="promo/<?= $dados4->id_game ?>" class="text_azul pb-3 back_card_m">
                                 <img src="<?= $dados4->card ?>" class="card-img-top" alt="">
                                 <div class="card-body backtext p-2">
@@ -177,11 +154,11 @@
                                     </div>
                                 </div>
                             </a>
-                    <?php
-                        }
+                        </div>
+                <?php
                     }
-                    ?>
-                </div>
+                }
+                ?>
             </div>
         </div>
     </section>
@@ -249,12 +226,12 @@
     <section class="container text-center d-sm-block d-md-none d-lg-none d-xl-none">
         <div class="row row-cols-2 justify-content-center">
             <div class="col mb-3" style="width: 18rem;">
-                <div class="card border-0 mb-2">
-                    <?php
-                    foreach ($dadosLanca as $key3 => $dados5) {
-                        if ($key3 <= 3) {
+                <?php
+                foreach ($dadosLanca as $key3 => $dados5) {
+                    if ($key3 <= 3) {
 
-                    ?>
+                ?>
+                        <div class="card border-0 mb-2">
                             <a href="lanca/<?= $dados5->id_game ?>" class="text_azul pb-3 back_card_m">
                                 <img src="<?= $dados5->card ?>" class="card-img-top" alt="">
                                 <div class="card-body backtext p-2">
@@ -264,12 +241,13 @@
                                     </div>
                                 </div>
                             </a>
-                    <?php
-                        }
+                        </div>
+                <?php
                     }
-                    ?>
-                </div>
+                }
+                ?>
             </div>
+        </div>
         </div>
         </div>
     </section>
