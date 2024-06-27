@@ -2,7 +2,7 @@
 <h1 class="h5 fw-bold text-center m-4">Desenvolvedores dos jogos gratuitos</h1>
 
 
-<section class="d-none d-md-none d-lg-none d-xl-block">
+<section class="d-none d-md-none d-lg-block d-xl-block">
     <div class="justify-content-center d-flex row container-fluid ">
         <?php
         foreach ($dadosGames as $dados) {
@@ -44,7 +44,7 @@
     </div>
 </section>
 
-<section class="d-sm-block d-md-none d-lg-none d-xl-none">
+<section class="d-none d-sm-block d-md-none d-lg-none d-xl-none">
     <div class="text-center d-flex justify-content-center row">
         <?php
         foreach ($dadosGames as $dados) {

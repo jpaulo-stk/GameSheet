@@ -21,6 +21,8 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="shortcut icon" href="images/Logo 1.svg" type="image/x-icon">
 
 </head>
 
@@ -145,6 +147,68 @@
         } else {
             include "pages/erro.php";
         }
+        
+        use PHPMailer\PHPMailer\PHPMailer;
+        use PHPMailer\PHPMailer\Exception;
+
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $nome = $_POST["nome"] ?? Null;
+            $email = $_POST["email"] ?? Null;
+            $mensagem = $_POST["mensagem"];
+            function mensagem2($msg)
+            {
+                echo "<script>alert('{$msg}');history.back();</script>";
+            };
+
+            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                mensagem2("Email inválido");
+            };
+
+            require 'src/Exception.php';
+            require 'src/PHPMailer.php';
+            require 'src/SMTP.php';
+
+            $phpmailer = new PHPMailer();
+
+            $phpmailer = new PHPMailer();
+            $phpmailer->isSMTP();
+            $phpmailer->Host = 'sandbox.smtp.mailtrap.io';
+            $phpmailer->SMTPAuth = true;
+            $phpmailer->Port = 2525;
+            $phpmailer->Username = '94b3bab2b544ae';
+            $phpmailer->Password = 'd7cbe37d62f3f7';
+
+            $phpmailer->setFrom('mailtrap@demomailtrap.com', 'João Paulo');
+            $phpmailer->addAddress("$email", $nome);
+            $phpmailer->Subject = $nome;
+
+
+            $phpmailer->isHTML(true);
+            $phpmailer->Body = "<html><strong>nome : </strong>  $nome <br> <strong> email:  </strong>  $email  <br> <strong> mensagem:</strong>  $mensagem </html>";
+            $phpmailer->AltBody = 'Hi there, we are happy to confirm your booking. Please check the document in the attachment.';
+
+            $attachmentPath = './confirmations/yourbooking.pdf';
+            if (file_exists($attachmentPath)) {
+                $mail->addAttachment($attachmentPath, 'yourbooking.pdf');
+            }
+            
+            
+
+            // Send the email
+            if (!$phpmailer->send()) {
+                echo 'Message could not be sent. Mailer Error: ' . $phpmailer->ErrorInfo;
+            } else {
+                function mensagem3($msg)
+            {
+                echo "<script>alert('{$msg}');history.go(index.php);</script>";
+            };
+
+            if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                mensagem3("Email Enviado");
+            };
+            }
+        }
+        
         ?>
     </main>
 
@@ -159,9 +223,9 @@
 
                 <a href="https://www.instagram.com/joaopaulo_bf_/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
             </div>
-            <div class="creditos">
-                <P>Desenvolvido por <br> João Paulo &copy;</P>
-            </div>
+                    <div class="creditos">
+            <P>Desenvolvido por <br> João Paulo &copy;</P>
+        </div>
         </section>
     </footer>
 
@@ -171,7 +235,7 @@
     <script src="js/fslightbox/node_modules/fslightbox/index.js"></script>
     <script src="https://kit.fontawesome.com/181ad36814.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
+    
 
     <script>
         AOS.init();

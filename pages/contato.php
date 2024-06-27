@@ -2,7 +2,7 @@
 <h1 class="h5 fw-bold text-center m-4" id="3" data-aos="zoom-in">Entre em Contato abaixo</h1>
 
 <section id="Formulario">
-    <form class="container" method="post" id="myform" action="./mail.php" data-aos="zoom-in">
+    <form class="container" method="post" id="myform" action="./index.php" data-aos="zoom-in">
         <div class="form-group m-2">
             <label for="nome">Nome</label>
             <input type="text" class="form-control" id="nome" name="nome" required placeholder="Nome completo">

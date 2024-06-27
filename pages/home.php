@@ -8,7 +8,7 @@
         foreach ($dadosGames as $dados) {
         ?>
             <div class="swiper-slide text-center">
-                <a href="game/<?= $dados->id_game ?>"><img src="<?= $dados->images ?>" class="size_img" alt="<?= $dados->nome ?>">
+                <a href="game/<?=$dados->id_game?>"><img src="<?= $dados->images ?>" class="size_img" alt="<?= $dados->nome ?>">
                 </a>
             </div>
         <?php
@@ -51,12 +51,12 @@
     <section class="container text-center d-sm-block d-md-none d-lg-none d-xl-none">
         <div class="row row-cols-2 justify-content-center">
             <div class="col" style="width: 18rem;">
-                <?php
-                foreach ($dadosRecomendados as $key => $dados3) {
-                    if ($key <= 3) {
+                    <?php
+                    foreach ($dadosRecomendados as $key => $dados3) {
+                        if ($key <= 3) {
 
-                ?>
-                        <div class="card border-0 mb-2">
+                    ?>
+                                    <div class="card border-0 mb-2">
                             <a href="recomendados/<?= $dados3->id_game ?>" class="text_azul pb-3 back_card_m">
                                 <img src="<?= $dados3->card ?>" class="card-img-top" alt="">
                                 <div class="card-body backtext p-2">
@@ -66,11 +66,11 @@
                                     </div>
                                 </div>
                             </a>
-                        </div>
-                <?php
+                            </div>
+                    <?php
+                        }
                     }
-                }
-                ?>
+                    ?>
             </div>
         </div>
     </section>
@@ -139,12 +139,12 @@
         <div class="row row-cols-2 justify-content-center">
             <div class="col" style="width: 18rem;">
 
-                <?php
-                foreach ($dadosPromo as $key2 => $dados4) {
-                    if ($key2 <= 3) {
+                    <?php
+                    foreach ($dadosPromo as $key2 => $dados4) {
+                        if ($key2 <= 3) {
 
-                ?>
-                        <div class="card border-0 mb-2">
+                    ?>
+                                    <div class="card border-0 mb-2">
                             <a href="promo/<?= $dados4->id_game ?>" class="text_azul pb-3 back_card_m">
                                 <img src="<?= $dados4->card ?>" class="card-img-top" alt="">
                                 <div class="card-body backtext p-2">
@@ -154,11 +154,11 @@
                                     </div>
                                 </div>
                             </a>
-                        </div>
-                <?php
+                            </div>
+                    <?php
+                        }
                     }
-                }
-                ?>
+                    ?>
             </div>
         </div>
     </section>
@@ -226,12 +226,12 @@
     <section class="container text-center d-sm-block d-md-none d-lg-none d-xl-none">
         <div class="row row-cols-2 justify-content-center">
             <div class="col mb-3" style="width: 18rem;">
-                <?php
-                foreach ($dadosLanca as $key3 => $dados5) {
-                    if ($key3 <= 3) {
+                    <?php
+                    foreach ($dadosLanca as $key3 => $dados5) {
+                        if ($key3 <= 3) {
 
-                ?>
-                        <div class="card border-0 mb-2">
+                    ?>
+                                    <div class="card border-0 mb-2">
                             <a href="lanca/<?= $dados5->id_game ?>" class="text_azul pb-3 back_card_m">
                                 <img src="<?= $dados5->card ?>" class="card-img-top" alt="">
                                 <div class="card-body backtext p-2">
@@ -241,13 +241,13 @@
                                     </div>
                                 </div>
                             </a>
-                        </div>
-                <?php
+                            </div>
+                    <?php
+                        }
                     }
-                }
-                ?>
+                    ?>
+                </div>
             </div>
-        </div>
         </div>
         </div>
     </section>

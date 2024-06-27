@@ -3,7 +3,7 @@ $dados = $dadosGames->$codigo;
 ?>
 
 <?php
-$dadosFotos = file_get_contents("http://localhost/gamesheet/api/fotos.php");
+$dadosFotos = file_get_contents("https://gamesheet.000webhostapp.com/api/fotos.php");
 $dadosFotos = json_decode($dadosFotos);
 
 $dadosFotos = $dadosFotos->$codigo;
